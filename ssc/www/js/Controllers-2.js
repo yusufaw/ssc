@@ -7,7 +7,7 @@ angular.module('ok.co', [])
     enableFriends: true
   };
   })
-  
+
   .controller('addLaporan', function($scope) {
   	$scope.test = function(){
   		alert("aaa");

@@ -1,10 +1,22 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, Chats, $ionicModal) {
+.controller('DashCtrl', function($scope, Chats, $ionicModal, Laporan) {
     //$scope.item = {'A', 'B', 'C', 'D'};
-    $scope.items = Chats.all();
+    $scope.items = Laporan.all(1);
+    console.log($scope.items);
     $scope.lapor = function () {
       $scope.openModalPlay();
+    };
+    $scope.isVerifikasi = function (x) {
+      if(x == 0){
+        return "Belum Terverifikasi"
+      }
+      else if(x == 1){
+        return "Terverifikasi"
+      }
+      else{
+        return "Tidak Terverifikasi"
+      }
     };
     $ionicModal.fromTemplateUrl('templates/add-laporan.html', {
       scope: $scope,
@@ -18,6 +30,22 @@ angular.module('starter.controllers', [])
 
     $scope.closeAddLaporan = function () {
       $scope.modalPlay.hide();
+    };
+
+
+  })
+  .controller('DetailLaporanCtrl', function($scope, $stateParams, Laporan) {
+    $scope.laporan = Laporan.get($stateParams.laporanId);
+    $scope.isVerifikasi = function (x) {
+      if(x == 0){
+        return "Belum Terverifikasi"
+      }
+      else if(x == 1){
+        return "Terverifikasi"
+      }
+      else{
+        return "Tidak Terverifikasi"
+      }
     };
   })
 

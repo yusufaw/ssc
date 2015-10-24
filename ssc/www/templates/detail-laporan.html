@@ -1,0 +1,41 @@
+<ion-view view-title="{{laporan.nama}}">
+  <ion-content class="padding">
+    <div class="card">
+      <div class="item item-divider positive-bg">
+        Foto
+      </div>
+      <div class="item item-image">
+        <img src="assets/user.jpg">
+      </div>
+      <div class="item">
+        Tanggal Laporan :
+        <br><br><div class="tebel">{{laporan.tgl_lapor}}</div>
+      </div>
+      <div class="item">
+      Status:
+      <br><br><div class="tebel">{{isVerifikasi(laporan.verifikasi)}}</div>
+    </div>
+      <div class="item">
+        Nama : <br><br><div class="tebel">{{laporan.nama}}</div>
+      </div>
+      <div class="item">
+        Alamat : <br><br><div class="tebel">{{laporan.alamat}}</div>
+      </div>
+      <div class="item">
+        Umur : <br><br><div class="tebel">{{laporan.umur}} tahun</div>
+      </div>
+      <div class="item">
+        Status Sekolah : <br><br><div class="tebel">{{laporan.status_sekolah}}</div>
+      </div>
+      <div class="item">
+        Nama Sekolah : <br><br><div class="tebel">{{laporan.nama_sekolah}}</div>
+      </div>
+      <div class="item item-text-wrap">
+         Lokasi : <br><br><div class="tebel">{{laporan.lat}}, {{laporan.lon}}</div>
+      </div>
+      <div class="item item-text-wrap">
+        Keterangan Tambahan : <br><br><div class="tebel">{{laporan.ket_tambahan}}</div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

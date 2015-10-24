@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'ok.co', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ok.co','pro.co', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -48,7 +48,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ok.co', 'starter.ser
         controller: 'DashCtrl'
       }
     }
-  })
+  }).state('tab.detail-laporan', {
+      url: '/dash/:laporanId',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/detail-laporan.html',
+          controller: 'DetailLaporanCtrl'
+        }
+      }
+    })
 
   .state('tab.chats', {
       url: '/chats',
@@ -68,17 +76,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ok.co', 'starter.ser
         }
       }
     })
-    .state('tab.laporan', {
-      url: '/dash/ok',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/add-laporan.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
 
-  .state('tab.account', {
+  .
+    state('tab.account', {
     url: '/account',
     views: {
       'tab-account': {

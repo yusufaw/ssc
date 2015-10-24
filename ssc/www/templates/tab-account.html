@@ -1,9 +1,12 @@
 <ion-view view-title="Profil">
   <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
+    <div id="profile-bg"></div>
+    <div id="content">
+      <div id="profile-info">
+        <img id="profile-image" src="assets/user.jpg">
+        <h3 id="profile-name">{{user[0].nama}}<br />{{user[0].total_point}}</h3>
+        <span id="profile-description">{{user[0].email}}<br/>{{user[0].telp}}<br/></span>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

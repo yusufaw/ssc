@@ -10,19 +10,20 @@
       <!--</div>-->
 
     <div class="list card">
-      <div class="item item-divider energized-bg">Belum Terkirim</div>
+      <div class="item item-divider assertive-bg">Belum Terkirim</div>
       <div class="item item-body">
         <ion-item ng-repeat="item in items">
-          {{item.lastText}}
 
         </ion-item>
       </div>
     </div>
     <div class="list card">
-      <div class="item item-divider assertive-bg">Terkirim</div>
+      <div class="item item-divider balanced-bg">Terkirim</div>
       <div class="item item-body">
-        <ion-item ng-repeat="item in items">
-          {{item.lastText}}
+        <ion-item class="item-thumbnail-left" ng-repeat="item in items" href="#/tab/dash/{{item.id}}">
+          <img ng-src="assets/user.jpg">
+          <h2>{{item.nama}} - {{item.tgl_lapor}} </h2>
+          <p><label>{{isVerifikasi(item.verifikasi)}}</label></p>
 
         </ion-item>
       </div>
