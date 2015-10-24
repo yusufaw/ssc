@@ -2,7 +2,7 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope, Chats, $ionicModal, Laporan) {
     //$scope.item = {'A', 'B', 'C', 'D'};
-    $scope.items = Laporan.all(1);
+    $scope.items = Laporan.all(201503001);
     console.log($scope.items);
     $scope.lapor = function () {
       $scope.openModalPlay();
