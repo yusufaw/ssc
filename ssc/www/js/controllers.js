@@ -16,7 +16,7 @@ angular.module('starter.controllers', [])
       $scope.modalPlay.show();
     };
 
-    $scope.closeModalPlay = function () {
+    $scope.closeAddLaporan = function () {
       $scope.modalPlay.hide();
     };
   })

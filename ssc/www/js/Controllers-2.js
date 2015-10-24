@@ -6,4 +6,11 @@ angular.module('ok.co', [])
   $scope.settings = {
     enableFriends: true
   };
-});
+  })
+  
+  .controller('addLaporan', function($scope) {
+  	$scope.test = function(){
+  		alert("aaa");
+  	};
+  });
+

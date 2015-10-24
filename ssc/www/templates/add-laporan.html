@@ -4,12 +4,19 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-modal-view>
+<ion-modal-view ng-controller="addLaporan">
+	<ion-header-bar>
+	    <h1 class="title">Buat Lapor</h1>
+	    <div class="buttons">
+	      <button class="button button-clear" ng-click="closeAddLaporan()">Close</button>
+	    </div>
+	  </ion-header-bar>
   <ion-content class="padding">
     <div class="list">
     	 <label class="item item-input">
 		    <span class="input-label">Ambil Gambar</span>
-		    <button class="button" ng-click="takePicture()">Kamera</button>
+		    <button class="button" ng-click="test()">Kamera</button>
+		    <br>
 		      <div class="item item-image">
 			    <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
 	    		<img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300">
