@@ -68,6 +68,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ok.co', 'starter.ser
         }
       }
     })
+    .state('tab.laporan', {
+      url: '/dash/ok',
+      views: {
+        'tab-chats': {
+          templateUrl: 'templates/add-laporan.html',
+          controller: 'ChatDetailCtrl'
+        }
+      }
+    })
 
   .state('tab.account', {
     url: '/account',
