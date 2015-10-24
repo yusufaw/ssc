@@ -1,0 +1,59 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="Buat Lapor">
+  <ion-content class="padding">
+    <div class="list">
+    	 <label class="item item-input">
+		    <span class="input-label">Ambil Gambar</span>
+		    <button class="button" ng-click="takePicture()">Kamera</button>
+		      <div class="item item-image">
+			    <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+	    		<img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300">
+			  </div>
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Nama</span>
+		    <input type="text" placeholder="Nama anak" ng-model="namaAnak">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Alamat Rumah</span>
+		    <input type="text" placeholder="Alamat Rumah" ng-model="alamatRumah">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Umur</span>
+		    <input type="text" placeholder="Umur" ng-model="umur">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Status Sekolah</span>
+		     <select ng-model="statusSekolah">
+			      <option>Tidak Sekolah</option>
+			      <option >Masih Sekolah</option>
+			 </select>
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Nama Sekolah</span>
+		     <input type="text" placeholder="Nama Sekolah" ng-model="namaSekolah">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Nama Orang Tua</span>
+		     <input type="text" placeholder="Nama Orang Tua" ng-model="namaOrtu">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Ket. Tambahan</span>
+		     <input type="text" placeholder="Keterangan Tambahan" ng-model="ketTambahan">
+		  </label>
+		  <label class="item item-input">
+		    <span class="input-label">Lokasi</span>
+		     <input type="text" placeholder="Lokasi Bertemu" ng-model="lokasiBertemu">
+		  </label>
+		  
+		  <button class="button button-block button-positive">
+			  Simpan
+		  </button>
+    </div>
+  </ion-content>
+</ion-view>
