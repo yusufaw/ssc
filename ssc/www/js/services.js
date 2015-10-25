@@ -17,6 +17,7 @@ angular.module('starter.services', [])
               alamat : response[i].alamat,
               umur : response[i].umur,
               status_sekolah : response[i].status_sekolah,
+              nama_sekolah : response[i].nama_sekolah,
               ortu : response[i].ortu,
               lat : response[i].lat,
               lon : response[i].lon,

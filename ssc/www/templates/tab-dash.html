@@ -12,8 +12,10 @@
     <div class="list card">
       <div class="item item-divider assertive-bg">Belum Terkirim</div>
       <div class="item item-body">
-        <ion-item>
-
+        <ion-item class="item-thumbnail-left item-button-right" ng-repeat="blm in belum">
+          <img ng-src="{{blm.imgURI}}">
+          <h2>{{blm.namaAnak}} </h2>
+          <button class="button button-positive" ng-click="kirimen($index)">Kirim</button>
         </ion-item>
       </div>
     </div>

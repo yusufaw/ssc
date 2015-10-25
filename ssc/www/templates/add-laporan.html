@@ -38,9 +38,10 @@
 		  <label class="item item-input">
 		    <span class="input-label">Status Sekolah</span>
 		     <select ng-model="statusSekolah" ng-change="cekSekolah(statusSekolah)">
-			      <option value="0">Tidak Sekolah</option>
-			      <option value="1">Masih Sekolah</option>
-			      <option value="2">Putus Sekolah</option>
+           <option ng-value="100" ng-selected="true">Pilih</option>
+			      <option ng-value="0">Tidak Sekolah</option>
+			      <option ng-value="1">Masih Sekolah</option>
+			      <option ng-value="2">Putus Sekolah</option>
 			 </select>
 		  </label>
 		  <label class="item item-input item-floating-label" ng-hide="isSekolah">

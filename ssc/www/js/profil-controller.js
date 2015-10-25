@@ -4,6 +4,6 @@
 
 angular.module('pro.co', [])
   .controller('AccountCtrl', function($scope, User) {
-    $scope.user = User.get(1);
+    $scope.user = User.get(201503001);
     console.log($scope.user);
   });
