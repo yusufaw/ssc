@@ -60,7 +60,7 @@ angular.module('starter.controllers', [])
     $scope.kirimen = function (index) {
       console.log($scope.belum[index].imgURI);
 
-      var url1 = "http://192.168.1.102/SSCAdmin/public/index.php/Api/add_laporan_offline";
+      var url1 = "http://tokotani2.16mb.com/public/index.php/Api/add_laporan_offline";
       // var url1 = "http://tokotani.besaba.com/index.php/home/daftar";
       var targetPath = $scope.belum[index].imgURI;
       var filename = targetPath.split("/").pop();

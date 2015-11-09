@@ -1,4 +1,4 @@
-var url = 'http://192.168.1.102/SSCAdmin/public/index.php';
+var url = 'http://tokotani2.16mb.com/public/index.php';
 angular.module('starter.services', [])
 
   .service('Laporan', function ($http) {
@@ -10,7 +10,7 @@ angular.module('starter.services', [])
           for(var i = (response.length-1); i >= 0; i--){
             ress[response.length-i-1] = {
               id : response.length-i-1,
-              gambar : "http://192.168.1.102/SSCAdmin/public/content/laporan/"+response[i].id_lapor+".jpg",
+              gambar : "http://tokotani2.16mb.com/public/content/laporan/"+response[i].id_lapor+".jpg",
               nama : response[i].nama,
               tgl_lapor : response[i].tgl_lapor,
               verifikasi : response[i].verifikasi,
