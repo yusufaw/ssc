@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.ssc413745" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>ssc</name>
+<widget id="com.crevion.ssc" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Save Street Child</name>
   <description>
-        An Ionic Framework and Cordova project.
+        This app created when hackathon merdeka 2.0
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="crevion.id@gmail.com" href="http://crevion.net/">
+      crevion team
     </author>
   <content src="index.html"/>
   <access origin="*"/>
+  <allow-navigation href="*"/>
   <allow-intent href="geo:*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
