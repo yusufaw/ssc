@@ -66,8 +66,7 @@ angular.module('ok.co', ['ngCordova'])
             var lon = position.coords.longitude;
             alert("lat " + lat);
 
-            var url1 = "http://tokotani2.16mb.com/public/index.php/Api/add_laporan";
-            // var url1 = "http://tokotani.besaba.com/index.php/home/daftar";
+            var url1 = "http://crevion.net/ssc/public/index.php/Api/add_laporan";
             var targetPath = $scope.imgURI;
             var filename = targetPath.split("/").pop();
             var formatFile = targetPath.split(".").pop();
@@ -110,8 +109,7 @@ angular.module('ok.co', ['ngCordova'])
           }, function (err) {
             // error
             alert("gagal mengambil posisi");
-            var url1 = "http://tokotani2.16mb.com/public/index.php/Api/add_laporan";
-            // var url1 = "http://tokotani.besaba.com/index.php/home/daftar";
+            var url1 = "http://crevion.net/ssc/public/index.php/Api/add_laporan";
             var targetPath = $scope.imgURI;
             var filename = targetPath.split("/").pop();
             var formatFile = targetPath.split(".").pop();

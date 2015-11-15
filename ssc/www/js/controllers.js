@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-  .controller('TabCtrl', function ($scope, Chats, $ionicModal, Laporan, $rootScope) {
+  .controller('TabCtrl', function ($scope, $ionicModal) {
     $ionicModal.fromTemplateUrl('templates/add-laporan.html', {
       scope: $scope,
     }).then(function (modal) {
@@ -16,7 +16,7 @@ angular.module('starter.controllers', [])
     };
 
   })
-  .controller('DashCtrl', function ($scope, Chats, $ionicModal, Laporan, $rootScope, $cordovaFileTransfer, $ionicLoading) {
+  .controller('DashCtrl', function ($scope, $ionicModal, Laporan, $rootScope, $cordovaFileTransfer, $ionicLoading) {
     $rootScope.$on('todo:listChanged', function () {
       $scope.closeAddLaporan();
       $scope.items = Laporan.all(201503001);
@@ -60,8 +60,7 @@ angular.module('starter.controllers', [])
     $scope.kirimen = function (index) {
       console.log($scope.belum[index].imgURI);
 
-      var url1 = "http://tokotani2.16mb.com/public/index.php/Api/add_laporan_offline";
-      // var url1 = "http://tokotani.besaba.com/index.php/home/daftar";
+      var url1 = "http://crevion.net/ssc/public/index.php/Api/add_laporan_offline";
       var targetPath = $scope.belum[index].imgURI;
       var filename = targetPath.split("/").pop();
       var formatFile = targetPath.split(".").pop();
@@ -137,24 +136,5 @@ angular.module('starter.controllers', [])
         return "Tidak Terverifikasi"
       }
     };
-  })
-
-  .controller('ChatsCtrl', function ($scope, Chats) {
-    // With the new view caching in Ionic, Controllers are only called
-    // when they are recreated or on app start, instead of every page change.
-    // To listen for when this page is active (for example, to refresh data),
-    // listen for the $ionicView.enter event:
-    //
-    //$scope.$on('$ionicView.enter', function(e) {
-    //});
-
-    $scope.chats = Chats.all();
-    $scope.remove = function (chat) {
-      Chats.remove(chat);
-    };
-  })
-
-  .controller('ChatDetailCtrl', function ($scope, $stateParams, Chats) {
-    $scope.chat = Chats.get($stateParams.chatId);
   })
 ;
